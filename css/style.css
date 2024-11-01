@@ -188,7 +188,7 @@ li:hover {
 
 .experienciasContenedor {
     display: grid;
-    grid-template-columns: repeat(6 , 1fr);
+    grid-template-columns: repeat(5 , 1fr);
     grid-auto-rows: 150px;
     gap: 15px;
 }
@@ -200,6 +200,11 @@ li:hover {
     box-shadow: 5px 5px 10px #5555;
 }
 
+.tarjetaExperiencias:nth-child(4) img {
+    object-position: top;
+    object-position: left;
+}
+
 .tarjetaExperiencias:first-child {
     grid-row: span 2;
     grid-column: span 2;
@@ -209,20 +214,16 @@ li:hover {
     grid-column: span 2;
 }
 
-.tarjetaExperiencias:nth-child(6) {
+.tarjetaExperiencias:nth-child(4) {
     grid-column: span 3;
     grid-row: span 3;
 }
 
-.tarjetaExperiencias:nth-child(7) {
+.tarjetaExperiencias:nth-child(5) {
     grid-row: span 3;
 }
 
 .tarjetaExperiencias:nth-child(9) {
-    grid-row: span 2;
-}
-
-.tarjetaExperiencias:nth-child(11) {
     grid-column: span 3;
 }
 
@@ -669,48 +670,30 @@ footer img {
     }
 
     .experienciasContenedor {
-        grid-template-columns: repeat(5 , 1fr);
+        grid-template-columns: repeat(4 , 1fr);
         gap: 15px;
     }
 
     .tarjetaExperiencias:first-child {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    
+    .tarjetaExperiencias:nth-child(3) {
         grid-column: span 1;
-        grid-row: span 1;
     }
-
-    .tarjetaExperiencias:nth-child(6) {
-        grid-column-start: 3;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        grid-row-end: 4;
+    
+    .tarjetaExperiencias:nth-child(4) {
+        grid-column: span 2;
+        grid-row: span 2;
     }
-
-    .tarjetaExperiencias:nth-child(7) {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 6;
+    
+    .tarjetaExperiencias:nth-child(5) {
+        grid-row: span 2;
     }
-
+    
     .tarjetaExperiencias:nth-child(9) {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 6;
-    }
-
-    .tarjetaExperiencias:nth-child(11) {
-        grid-column-start: 3;
-        grid-column-end: 6;
-        grid-row-start: 6;
-        grid-row-end: 7;
-    }
-
-    .tarjetaExperiencias:nth-child(12) {
-        grid-column-start: 5;
-        grid-column-end: 6;
-        grid-row-start: 4;
-        grid-row-end: 6;
+        grid-column: span 1;
     }
 
     /*Testimonios*/
@@ -1077,14 +1060,14 @@ footer img {
             gap: 1rem;
         }
         
-            .busqueda {
-                font-size: 0.7rem;
-            }
-            
-            .buscadorBoton {
-                font-size: 0.7rem;
-                width: 100%;
-            }
+        .busqueda {
+            font-size: 0.7rem;
+        }
+        
+        .buscadorBoton {
+            font-size: 0.7rem;
+            width: 100%;
+        }
     
         /*Experiencias*/
         .experiencias h2 {
@@ -1099,32 +1082,36 @@ footer img {
 
         .tarjetaExperiencias:first-child {
             grid-row: span 1;
-            grid-column: span 2;
+            grid-column: span 1;
         }
         
+        .tarjetaExperiencias:nth-child(2) {
+            grid-column: span 2;
+        }
+
         .tarjetaExperiencias:nth-child(3) {
             grid-column: span 1;
         }
 
-        .tarjetaExperiencias:nth-child(4) {
-            grid-column: span 2;
+        .tarjetaExperiencias:nth-child(3) img {
+            object-position: left;
         }
         
-        .tarjetaExperiencias:nth-child(6) {
+        .tarjetaExperiencias:nth-child(4) {
             grid-column: span 1;
             grid-row: span 1;
         }
         
-        .tarjetaExperiencias:nth-child(7) {
+        .tarjetaExperiencias:nth-child(5) {
             grid-row: span 2;
+        }
+
+        .tarjetaExperiencias:nth-child(7) {
+            grid-column: span 2;
         }
         
         .tarjetaExperiencias:nth-child(9) {
-            grid-row: span 2;
-        }
-        
-        .tarjetaExperiencias:nth-child(11) {
-            grid-column: span 2;
+            grid-column: span 1;
         }
 
         /*Testimonios*/
