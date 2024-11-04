@@ -6,7 +6,7 @@
 
 body { 
     background-color: #fbf9f9;
-    font-family: 'montserrat';
+    font-family: var(--fontfamily-general);
     min-height: 100vh;
     width: 90%;
     margin: auto;
@@ -22,14 +22,14 @@ body::before {
     z-index: -10;
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/contacto/formulario3.jpg);
+    background-image: url(../img/contacto/formulario.jpg);
     background-size: cover;
     background-position: center;
     filter: blur(10px);
 }
 
 :root {
-    /*----------Fuentes----------*/
+    /*----------Tamaño de fuentes----------*/
     --fontsize-h2-large: 2.3rem;
     --fontsize-h2-medium: 2.1rem;
     --fontsize-h2-small: 1.9rem;
@@ -39,12 +39,15 @@ body::before {
     --fontcolor-nav: #000;
     --fontcolor-h2: #585454;
     --fontcolor-footer: #000;
+
+        /*----------Tipo de fuentes----------*/
+        --fontfamily-general: 'Montserrat' 
 }
 
 
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 
 /*BARRA DE NAVEGACION*/
 
@@ -99,7 +102,6 @@ header a {
 
 header img {
     width: 60px;
-    filter: grayscale(100%) brightness(0%);
 }
 
 header h1 {
@@ -113,10 +115,10 @@ li:hover {
     background-color: #1b191927;
 }
 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
 /*INDEX*/
 
 /*Buscador*/
@@ -124,7 +126,6 @@ li:hover {
     height: 400px;
     padding: 40px;
     margin-bottom: 40px;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -133,7 +134,7 @@ li:hover {
 }
 
 .buscadorTitulo h2 {
-    font-size: 2.5rem;
+    font-size: var(--fontsize-h2-large);
     letter-spacing: 5px;
     color: var(--fontcolor-h2);
 }
@@ -150,7 +151,7 @@ li:hover {
     background-color: #ffffff4d;
     border: transparent;
     outline: none;
-    font-family: 'Montserrat';
+    font-family: var(--fontfamily-general);
     font-size: 1.1rem;
 }
 
@@ -293,12 +294,13 @@ li:hover {
     border-radius: 50%;
 }
 
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
 /*NOSOTROS*/
 
-/*Sobre nosotros, valores y misiones*/
+/*Empresa, valores y misiones*/
 .tarjetaEmpresa {
     display: flex;
     justify-content: space-between;
@@ -308,24 +310,24 @@ li:hover {
     box-shadow: 5px 5px 15px #5555;
 }
 
-.tarjetaEmpresa h2 {
+.tarjetaEmpresa__info {
+    width: 50%;
+    margin: auto 20px;
+}
+
+.tarjetaEmpresa__info h2 {
     text-align: center;
     margin-bottom: 20px;
     color: var(--fontcolor-h2);
     font-size: var(--fontsize-h2-large);
 }
 
-.tarjetaEmpresa p {
+.tarjetaEmpresa__info p {
     margin-bottom: 20px;
     color: #555;
     text-align: justify;
     margin: auto 0;
     font-size: 1.3rem;
-}
-
-.tarjetaEmpresa__info {
-    width: 50%;
-    margin: auto 20px;
 }
 
 .tarjetaEmpresa img {
@@ -336,7 +338,7 @@ li:hover {
 }
 
 /*Equipo*/
-.tarjetaEquipo {
+.equipo {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -345,7 +347,7 @@ li:hover {
     box-shadow: 5px 5px 15px #5555;
 }
 
-.tarjetaEquipo h2 {
+.equipo h2 {
     font-size: var(--fontsize-h2-large);
     color: var(--fontcolor-h2);
     text-align: center;
@@ -365,19 +367,20 @@ li:hover {
     gap: 10px;
 }
 
-.tarjetaEquipo p {
-    text-align: center;
-    font-weight: bold;
-}
-
-.tarjetaEquipo img {
+.tarjetaMiembro img {
     width: 100%;
     box-shadow: 5px 5px 10px #5555;
 }
 
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
+.tarjetaMiembro p {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
 /*DESTINOS*/
 .destinos {
     margin-bottom: 40px;
@@ -395,13 +398,11 @@ li:hover {
 .destinosContenedor {
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
-    grid-auto-flow: dense;
     grid-auto-rows: 300px;
     gap: 15px;
 }
 
 .tarjetaDestinos {
-    color: #555;
     box-shadow: 5px 5px 10px #5555;
     position: relative;
     text-align: center;
@@ -432,9 +433,10 @@ li:hover {
     font-size: 1.4rem;
 }
 
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
 /*PAQUETES*/
 .paquetes {
     margin-bottom: 40px;
@@ -483,7 +485,7 @@ li:hover {
     background-color: #873d34c4;
     color: #fff;
     width: 40%;
-    font-family: 'Montserrat';
+    font-family: var(--fontfamily-general);
     border: none;
     cursor: pointer;
 }
@@ -492,9 +494,10 @@ li:hover {
     background-color: #873d34;
 }
 
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
 /*CONTACTO*/
 .contacto {    
     display: grid;
@@ -541,12 +544,12 @@ li:hover {
     margin-bottom: 10px;
     border: 1px solid #0000;
     background-color: #e6e6e699;
-    font-family: 'Montserrat';
+    font-family: var(--fontfamily-general);
 }
 
 textarea {
     height: 8rem;
-    font-family: 'Montserrat';
+    font-family: var(--fontfamily-general);
 }
 
 .btn {
@@ -555,7 +558,7 @@ textarea {
     background-color: #873d34c4;
     color: #fff;
     width: 100%;
-    font-family: 'Montserrat';
+    font-family: var(--fontfamily-general);
     border: none;
     cursor: pointer;
 }
@@ -569,9 +572,10 @@ textarea {
 }
 
 
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
 /*FOOTER*/
 footer {
     padding: 20px 0 20px 0;
@@ -601,13 +605,9 @@ footer img {
 }
 
 .navegacion h3 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'shadows into light two';
     letter-spacing: 5px;
-    color: var(--fontcolor-footer);
-}
-
-.navegacion span {
     color: var(--fontcolor-footer);
 }
 
@@ -634,7 +634,6 @@ footer img {
 
 .tarjetaComunicacion img {
     width: 25px;
-    filter: grayscale(100%) brightness(0%);
 }
 
 /*Redes*/
@@ -663,13 +662,15 @@ footer img {
 
 .redesIconos img {
     width: 35px;
-    filter: grayscale(100%) brightness(0%);
 }
 
 
-/*----------------------------------------RESPONSIVE-----------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------RESPONSIVE-------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
 
 /*Vista laptops, large tablets in landscape & small desktops ----- de 769 hasta 1279*/
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
@@ -731,10 +732,14 @@ footer img {
         grid-column: span 1;
     }
 
+    .tarjetaExperiencias:nth-child(9) img {
+        object-position: center;
+    }
+
     /*Testimonios*/
-.testimonios h2 {
-    font-size: var(--fontsize-h2-medium);
-}
+    .testimonios h2 {
+        font-size: var(--fontsize-h2-medium);
+    }
 
     .tarjetaTestimonios {
         font-size: 0.8rem;
@@ -753,17 +758,12 @@ footer img {
         font-size: var(--fontsize-h2-medium);
     }
 
-    .tarjetaEquipo p {
-        font-size: 1rem;
-    }
-
     .tarjetaEmpresa p {
         font-size: 1.1rem;
     }
-    
-    /*SUCURSALES*/
-    .sucursales h2 {
-        font-size: var(--fontsize-h2-medium);
+
+    .tarjetaMiembro p {
+        font-size: 1rem;
     }
 
     /*DESTINOS*/
@@ -822,7 +822,11 @@ footer img {
         font-size: 1.3rem;
     }
 
-    /*FOOTER*/    
+    /*FOOTER*/   
+    .navegacion h3 {
+        font-size: 2.3rem;
+    }
+    
     .navegacion a {
         font-size: 1rem;
     }
@@ -918,6 +922,10 @@ footer img {
         grid-column: span 2;
     }
     
+    .tarjetaExperiencias:nth-child(9) img {
+        object-position: center;
+    }
+    
     /*Testimonios*/
     .testimoniosh2 {
         font-size: var(--fontsize-h2-small);
@@ -946,12 +954,8 @@ footer img {
     }
 
     /*NOSOTROS*/
-    .tarjetaEmpresa h2 , .tarjetaEquipo h2 {
+    .tarjetaEmpresa h2 , .equipo h2 {
         font-size: var(--fontsize-h2-small);
-    }
-
-    .tarjetaEquipo p {
-        font-size: 1rem;
     }
 
     .tarjetaEmpresa p {
@@ -965,34 +969,23 @@ footer img {
     }
 
     .tarjetaEmpresa__info {
-        width: 70%;
+        width: 80%;
     }
     
     .tarjetaEmpresa img {
-        width: 0%;
+        width: 80%;
     }
 
     .equipoContenedor {
         grid-template-columns: repeat(2 , 1fr);
     }
 
+    .tarjetaMiembro p {
+        font-size: 1rem;
+    }
+
     .tarjetaMiembro img {
         width: 70%;
-    }
-
-    /*SUCURSALES*/
-    .sucursales h2 {
-        font-size: var(--fontsize-h2-small);
-    }
-
-    .sucursalesContenedor {
-        grid-template-columns: 1fr;
-    }
-
-    .tarjetaSucursales {
-        justify-content: space-around;
-        font-size: 0.7rem;
-        flex-wrap: wrap;
     }
 
     /*DESTINOS*/
@@ -1062,6 +1055,7 @@ footer img {
     /*FOOTER*/
     footer {
         flex-direction: column;
+        gap: 30px;
     }
 
     .navegacion {
@@ -1089,258 +1083,261 @@ footer img {
     }
 }
 
+
 /*Vista smaller smartphones ----- hasta 481*/
 @media only screen and (max-width:480px) {
-        /*BARRA DE NAVEGACION*/
-        header {
-            height: auto;
-            display: flex;
-            flex-direction: column;
-        }
+    /*BARRA DE NAVEGACION*/
+    header {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navContenedor {
+        margin: 5px 0 5px 0;
+    }
+
+    ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header a { 
+        font-size: 0.8em;
+    }
+
+    header img {
+        width: 40px;
+    }
     
-        .navContenedor {
-            margin: 5px 0 5px 0;
-        }
+    /*INDEX*/
+    /*Buscador*/
+    .buscadorTitulo h2 {
+        font-size: var(--fontsize-h2-extrasmall);
+        letter-spacing: 0px;
+    }
+    .buscadorInput {
+        flex-direction: column;
+        gap: 1rem;
+    }
     
-        ul {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+    .busqueda {
+        font-size: 0.7rem;
+    }
     
-        header a { 
-            font-size: 0.8em;
-        }
+    .buscadorBoton {
+        font-size: 0.7rem;
+        width: 100%;
+    }
     
-        header img {
-            width: 40px;
-        }
+    /*Experiencias*/
+    .experiencias h2 {
+        font-size: var(--fontsize-h2-extrasmall);
+    }
+
+    .experienciasContenedor {
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 15px;
+        grid-auto-flow: dense;
+    }
+
+    .tarjetaExperiencias:first-child {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
     
-        /*INDEX*/
-        /*Buscador*/
-        .buscadorTitulo h2 {
-            font-size: var(--fontsize-h2-extrasmall);
-            letter-spacing: 0px;
-        }
+    .tarjetaExperiencias:nth-child(2) {
+        grid-column: span 2;
+    }
 
-        .buscadorInput {
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .busqueda {
-            font-size: 0.7rem;
-        }
-        
-        .buscadorBoton {
-            font-size: 0.7rem;
-            width: 100%;
-        }
+    .tarjetaExperiencias:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    .tarjetaExperiencias:nth-child(3) img {
+        object-position: left;
+    }
     
-        /*Experiencias*/
-        .experiencias h2 {
-            font-size: var(--fontsize-h2-extrasmall);
-        }
+    .tarjetaExperiencias:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .tarjetaExperiencias:nth-child(5) {
+        grid-row: span 2;
+    }
+    .tarjetaExperiencias:nth-child(7) {
+        grid-column: span 2;
+    }
+    
+    .tarjetaExperiencias:nth-child(9) {
+        grid-column: span 1;
+    }
+    .tarjetaExperiencias:nth-child(9) img {
+        object-position: center;
+    }
 
-        .experienciasContenedor {
-            grid-template-columns: repeat(2 , 1fr);
-            gap: 15px;
-            grid-auto-flow: dense;
-        }
+    /*Testimonios*/
+    .testimonios h2 {
+        font-size: var(--fontsize-h2-extrasmall);
+    }
 
-        .tarjetaExperiencias:first-child {
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-        
-        .tarjetaExperiencias:nth-child(2) {
-            grid-column: span 2;
-        }
+    .testimoniosContenedor {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    }
 
-        .tarjetaExperiencias:nth-child(3) {
-            grid-column: span 1;
-        }
+    .introduccionTestimonios {
+        gap: 10px;
+    }
 
-        .tarjetaExperiencias:nth-child(3) img {
-            object-position: left;
-        }
-        
-        .tarjetaExperiencias:nth-child(4) {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-        
-        .tarjetaExperiencias:nth-child(5) {
-            grid-row: span 2;
-        }
+    .tarjetaTestimonios {
+        flex-direction: column;
+        font-size: 0.7rem;
+    }
 
-        .tarjetaExperiencias:nth-child(7) {
-            grid-column: span 2;
-        }
-        
-        .tarjetaExperiencias:nth-child(9) {
-            grid-column: span 1;
-        }
+    .introduccionTestimonios h3 {
+        font-size: 1.6rem;
+    }
+    
+    .introduccionTestimonios p {
+        font-size: 1rem;
+    }
+    
+    /*NOSOTROS*/
+    .tarjetaEmpresa h2 , .equipo h2 {
+        font-size: var(--fontsize-h2-extrasmall);
+    }
 
-        /*Testimonios*/
-        .testimonios h2 {
-            font-size: var(--fontsize-h2-extrasmall);
-        }
+    .tarjetaEmpresa p {
+        font-size: 0.7rem;
+    }
 
-        .testimoniosContenedor {
-        grid-template-columns: 1fr;
+    .tarjetaEmpresa {
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
-        }
+    }
 
-        .introduccionTestimonios {
-            gap: 10px;
-        }
-
-        .tarjetaTestimonios {
-            font-size: 0.7rem;
-        }
-
-        .introduccionTestimonios h3 {
-            font-size: 1.6rem;
-        }
-        
-        .introduccionTestimonios p {
-            font-size: 1rem;
-        }
+    .tarjetaEmpresa__info {
+        width: 80%;
+    }
     
-        /*NOSOTROS*/
-        .tarjetaEmpresa h2 , .tarjetaEquipo h2 {
-            font-size: var(--fontsize-h2-extrasmall);
-        }
+    .tarjetaEmpresa img {
+        width: 80%;
+    }
 
-        .tarjetaEquipo p {
-            font-size: 1rem;
-        }
+    .equipoContenedor {
+        grid-template-columns: 1fr;
+    }
 
-        .tarjetaEmpresa p {
-            font-size: 0.7rem;
-        }
+    .tarjetaMiembro p {
+        font-size: 1rem;
+    }
 
-        .tarjetaEmpresa {
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .tarjetaEmpresa__info {
-            width: 70%;
-        }
-        
-        .tarjetaEmpresa img {
-            width: 70%;
-        }
-
-        .equipoContenedor {
-            grid-template-columns: 1fr;
-        }
-
-        .tarjetaMiembro img {
-            width: 70%;
-        }
+    .tarjetaMiembro img {
+        width: 70%;
+    }
     
-        /*DESTINOS*/
-        .sucursales h2 {
-            font-size: var(--fontsize-h2-extrasmall);
-        }
+    /*DESTINOS*/
+    .sucursales h2 {
+        font-size: var(--fontsize-h2-extrasmall);
+    }
 
-        .destinosContenedor {
-            grid-template-columns: 1fr;
-            grid-auto-rows: 200px;
-        }
+    .destinosContenedor {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+    }
+
+    .tarjetaDestinos:nth-child(2) {
+        grid-row: span 1;
+    }
     
-        .tarjetaDestinos:nth-child(2) {
-            grid-row: span 1;
-        }
-        
-        .tarjetaDestinos:nth-child(4) {
-            grid-column: span 1;
-        }
+    .tarjetaDestinos:nth-child(4) {
+        grid-column: span 1;
+    }
 
-        .tarjetaDestinos h3 {
-            font-size: 1.1rem;
-        }
+    .tarjetaDestinos h3 {
+        font-size: 1.1rem;
+    }
 
-        /*PAQUETES*/
-        .paquetes h2 {
-            font-size: var(--fontsize-h2-extrasmall);
-        }
+    /*PAQUETES*/
+    .paquetes h2 {
+        font-size: var(--fontsize-h2-extrasmall);
+    }
 
-        .paquetesContenedor {
-            grid-template-columns: 1fr;
-        }
-        
-        .tarjetaPaquetes {
-            font-size: 0.9rem;
-        }
-        
-        .tarjetaPaquetes img {
-            width: 70%;
-        }
-        
-        .tarjetaPaquetes h3 {
-            font-size: 1.1rem;
-        }
-        
-        .botonPaquetes {
-            font-size: 1rem;
-        }
+    .paquetesContenedor {
+        grid-template-columns: 1fr;
+    }
     
-        /*CONTACTO*/
-        .contacto {
-            grid-template-columns: 1fr;
-        }
+    .tarjetaPaquetes {
+        font-size: 0.9rem;
+    }
+    
+    .tarjetaPaquetes img {
+        width: 70%;
+    }
+    
+    .tarjetaPaquetes h3 {
+        font-size: 1.1rem;
+    }
+    
+    .botonPaquetes {
+        font-size: 1rem;
+    }
+    
+    /*CONTACTO*/
+    .contacto {
+        grid-template-columns: 1fr;
+    }
 
-        .contacto h2 {
-            font-size: var(--fontsize-h2-extrasmall);
-        }
+    .contacto h2 {
+        font-size: var(--fontsize-h2-extrasmall);
+    }
 
-        .info {
-            font-size: 0.7rem;
-        }
+    .info {
+        font-size: 0.7rem;
+    }
 
-        .btn {
-            font-size: 0.9rem;
-        }
+    .btn {
+        font-size: 0.9rem;
+    }
     
-        /*FOOTER*/
-        footer {
-            flex-direction: column;
-        }
+    /*FOOTER*/
+    footer {
+        flex-direction: column;
+        gap: 30px;
+    }
     
-        .navegacion {
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-    
-        .comunicacion {
-            flex-direction: row;
-            margin-bottom: 20px;
-        }
+    .navegacion {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 
-        .comunicacion p {
-            display: none;
-        }
-    
-        .tarjetaComunicacion {
-            justify-content: center;
-            flex-basis: 45%;
-        }
-    
-        .tarjetaComunicacion img {
-            width: 35px;
-        }
+    .comunicacion {
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+    .comunicacion p {
+        display: none;
+    }
 
-        .redes {
-            gap: 10px;
-        }
-    
-        .redes h3 , .redes p {
-            text-align: center;
-        }
+    .tarjetaComunicacion {
+        justify-content: center;
+        flex-basis: 45%;
+    }
+
+    .tarjetaComunicacion img {
+        width: 35px;
+    }
+
+    .redes {
+        gap: 10px;
+    }
+
+    .redes h3 , .redes p {
+        text-align: center;
+    }
 }
 
