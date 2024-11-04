@@ -73,6 +73,7 @@ nav {
 ul {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 header li {
@@ -85,7 +86,7 @@ header li {
 header a { 
     text-decoration: none;
     color: var(--fontcolor-nav);
-    padding: 0 6px;
+    padding: 0 5px;
     font-size: 1.2em;
 }
 
@@ -146,7 +147,7 @@ li:hover {
     height: 3rem;
     padding: 0.5rem 1rem;
     width: 100%;
-    background-color: #ffffff27;
+    background-color: #ffffff4d;
     border: transparent;
     outline: none;
     font-family: 'Montserrat';
@@ -156,7 +157,8 @@ li:hover {
 .buscadorBoton {
     width: 50%;
     height: 3rem;
-    background-color: #2ecc71;
+    background-color: #873d34c4;
+    color: #fff;
     border: none;
     cursor: pointer;
     font-size: 1.4rem;
@@ -168,7 +170,7 @@ li:hover {
 }
 
 .buscadorBoton:hover {
-    background-color: #27ae60;
+    background-color: #873d34;
 }
 
 /*Experiencias*/
@@ -225,6 +227,10 @@ li:hover {
 
 .tarjetaExperiencias:nth-child(9) {
     grid-column: span 3;
+}
+
+.tarjetaExperiencias:nth-child(9) img {
+    object-position: 0px -130px;
 }
 
 /*Testimonios*/
@@ -326,6 +332,7 @@ li:hover {
     width: 50%;
     object-fit: cover;
     box-shadow: 5px 5px 10px #5555;
+    filter: opacity(0.7);
 }
 
 /*Equipo*/
@@ -429,25 +436,16 @@ li:hover {
 /*---------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
 /*PAQUETES*/
+.paquetes {
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    box-shadow: 5px 5px 15px #5555;
+}
 
 .paquetesContenedor {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
-    gap: 10px;
-}
-
-.tarjetaPaquetes {
-    width: 100%;
-    text-align: center;
-    background-color: #4a8f8257;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-.tarjetaPaquetes img {
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    gap: 20px;
 }
 
 .paquetes h2 {
@@ -455,6 +453,43 @@ li:hover {
     margin-bottom: 20px;
     color: var(--fontcolor-h2);
     font-size: var(--fontsize-h2-large);
+}
+
+.tarjetaPaquetes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    box-shadow: 5px 5px 10px #5555;
+    padding-bottom: 10px;
+}
+
+.tarjetaPaquetes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjetaPaquetes h3 {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.botonPaquetes {
+    font-size: 1.4rem;
+    padding: .5rem 1rem;
+    background-color: #873d34c4;
+    color: #fff;
+    width: 40%;
+    font-family: 'Montserrat';
+    border: none;
+    cursor: pointer;
+}
+
+.botonPaquetes:hover {
+    background-color: #873d34;
 }
 
 /*---------------------------------------------------------------------------------------*/
@@ -515,10 +550,10 @@ textarea {
 }
 
 .btn {
-    color: #fff;
     font-size: 1.4rem;
     padding: 1rem 1rem;
-    background-color: #2ecc71;
+    background-color: #873d34c4;
+    color: #fff;
     width: 100%;
     font-family: 'Montserrat';
     border: none;
@@ -530,7 +565,7 @@ textarea {
 }
 
 .btn:hover {
-    background-color: #27ae60;
+    background-color: #873d34;
 }
 
 
@@ -759,15 +794,28 @@ footer img {
     }
     
     .tarjetaPaquetes {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
+    
+    .tarjetaPaquetes img {
+        width: 80%;
+    }
+    
+    .tarjetaPaquetes h3 {
+        font-size: 1.2rem;
+    }
+    
+    .botonPaquetes {
+        font-size: 1.2rem;
+    }
+
     /*CONTACTO*/
     .contacto h2 {
         font-size: var(--fontsize-h2-medium);
     }
 
     .info {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .btn {
@@ -921,11 +969,15 @@ footer img {
     }
     
     .tarjetaEmpresa img {
-        width: 70%;
+        width: 0%;
     }
 
     .equipoContenedor {
         grid-template-columns: repeat(2 , 1fr);
+    }
+
+    .tarjetaMiembro img {
+        width: 70%;
     }
 
     /*SUCURSALES*/
@@ -975,10 +1027,26 @@ footer img {
     }
     
     .tarjetaPaquetes {
-        font-size: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .tarjetaPaquetes img {
+        width: 70%;
+    }
+    
+    .tarjetaPaquetes h3 {
+        font-size: 1.2rem;
+    }
+    
+    .botonPaquetes {
+        font-size: 1.1rem;
     }
 
     /*CONTACTO*/
+    .contacto {
+        grid-template-columns: 1fr;
+    }
+
     .contacto h2 {
         font-size: var(--fontsize-h2-small);
     }
@@ -1170,6 +1238,10 @@ footer img {
         .equipoContenedor {
             grid-template-columns: 1fr;
         }
+
+        .tarjetaMiembro img {
+            width: 70%;
+        }
     
         /*DESTINOS*/
         .sucursales h2 {
@@ -1203,10 +1275,26 @@ footer img {
         }
         
         .tarjetaPaquetes {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+        }
+        
+        .tarjetaPaquetes img {
+            width: 70%;
+        }
+        
+        .tarjetaPaquetes h3 {
+            font-size: 1.1rem;
+        }
+        
+        .botonPaquetes {
+            font-size: 1rem;
         }
     
         /*CONTACTO*/
+        .contacto {
+            grid-template-columns: 1fr;
+        }
+
         .contacto h2 {
             font-size: var(--fontsize-h2-extrasmall);
         }
